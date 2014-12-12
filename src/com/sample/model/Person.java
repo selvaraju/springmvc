@@ -13,6 +13,9 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name="PERSON")
@@ -23,9 +26,11 @@ public class Person {
 	  @Column(name="person_id")
 	  @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int person_id;
-    
+	
+	@Size(min=2, max=20) 
+	@NotEmpty
     private String name;
-     
+	 
     private String country;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL,mappedBy = "person")  

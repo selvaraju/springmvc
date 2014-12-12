@@ -4,6 +4,13 @@
 <html>
 <head>
     <title>Spring MVC Form Handling</title>
+    <style>
+.error {
+    color: #ff0000;
+    font-style: italic;
+    font-weight: bold;
+}
+</style>
 </head>
 <body>
 
@@ -32,7 +39,7 @@
     
     <tr>
         <td><form:label path="">Name</form:label></td>
-        <td><form:input path="name" /></td>
+        <td><form:input path="name" /> <form:errors path="name" cssClass="error" /></td>
     </tr>
     <tr>
         <td><form:label path="departmentName">Dept</form:label></td>

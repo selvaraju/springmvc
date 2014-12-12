@@ -22,4 +22,8 @@ public interface PersonDAO {
     public void depSave(Department department) ;
     
     public List<Department> depList() ;
+    
+    public Employee getEmployeeByID(int id) ;
+    
+    public void removePerson(int id) ;
 }

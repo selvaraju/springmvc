@@ -22,6 +22,10 @@ public class EmployeeServiceImpl implements EmployeeService{
 		personDAO.empsave(employee);
 	}
 
+	 public Employee getEmployeeByID(int id) {
+		 
+		 return personDAO.getEmployeeByID(id);
+	 }
 	public PersonDAO getPersonDAO() {
 		return personDAO;
 	}
@@ -29,6 +33,11 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	public void setPersonDAO(PersonDAO personDAO) {
 		this.personDAO = personDAO;
+	}
+
+	public void removePerson(int id) {
+		 
+		personDAO.removePerson(id);
 	}
 	
 	

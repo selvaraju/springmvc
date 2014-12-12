@@ -53,6 +53,18 @@ public class PersonDAOImpl implements PersonDAO {
         return (List<Employee>) template.find("from Employee");
     }
     
+    
+    public Employee getEmployeeByID(int id) {
+        
+        return template.get(Employee.class,id);
+    }
+    
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW)
+    public void removePerson(int id) {
+    	
+    	template.delete(getEmployeeByID(id));
+    	
+    }
     @SuppressWarnings("unchecked")
     public List<Department> depList() {
         
