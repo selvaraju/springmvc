@@ -19,7 +19,7 @@
 <c:if test="${SUCCESS_MESSAGE != null}">
   <div id="status_message">${SUCCESS_MESSAGE}</div>
 </c:if> 
-<form:form method="POST" action="/springmvc/addEmployee" commandName="employee">
+<form:form method="POST" action="/springmvc/web/addEmployee" commandName="employee">
    <table>
    
     <c:if test="${!empty employee.name}">

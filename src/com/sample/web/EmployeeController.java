@@ -37,8 +37,8 @@ public class EmployeeController {
 	        System.out.println("**********************************************");
 	        System.out.println("Welcome home! The client locale is "+locale);
 	        System.out.println("**********************************************");
-	        throw new CustomGenericException("101", "TEST MESSAGE");
-	        //return "employee";
+	        //throw new CustomGenericException("101", "TEST MESSAGE");
+	        return "employee";
 	    }
 	 
 	 
