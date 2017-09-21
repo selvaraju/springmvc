@@ -1,0 +1,7 @@
+tools:
+  python: 2.7.12
+flows:
+  default: |
+    echo ok
+    env
+    echo PYTHON_LOCATION `which python`
